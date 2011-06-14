@@ -1,0 +1,24 @@
+span#maincontent {
+}
+div.course-content {
+}
+div#region-post-box {
+}
+div#region-main-wrap {
+}
+
+div#region-main-box {
+    width: 100% !important;
+    background-color: red !important;
+    margin-left: -210px !important;
+}
+div#region-post-box {
+    left: 100% !important;
+    margin-left: -635px !important;
+}
+div#region-main-wrap {
+}
+div#region-pre {
+    margin-left: -790px !important;
+    left: 0px: !important;
+}
