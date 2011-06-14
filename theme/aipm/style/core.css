@@ -1,0 +1,712 @@
+/********************************************************
+**
+** Theme name: aipm
+** Description: Pukunui Custom Theme (basic)
+** Creation Date: 18/5/2011
+** Author: Toshihiro Maruyama
+** Copyright: Pukunui Technology
+**
+*********************************************************/
+
+/*------------------------
+	Global 
+------------------------*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url([[pix:theme|bodybg]]) repeat #3e516c;
+	font-size: 13px;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, td, th, input, textarea {
+	line-height: 1.4em;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+#page {
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	background: transparent;
+	width: 100%;
+	
+}
+
+#page:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+#page-content-wrapper {
+	margin: 20px 3% 0;
+	padding: 10px 13px 10px;
+	background: #fff;
+	float: none;
+	clear: both;
+	border: solid 4px #c7c7ca;
+	min-width: 880px;
+}
+
+#region-main-wrap {
+	background: #fff;
+}
+
+#page-content #region-main-box #region-post-box #region-main-wrap #region-main {
+	padding: 0 30px;
+	margin-top: -1px;
+}
+
+a:link, a:visited {
+	color: #000080;
+	font-weight: bold;
+}
+
+a:hover, a:active {
+	color: #00009d;
+	text-decoration: underline;
+}
+
+a img {
+	border: none;
+}
+
+a:active {
+	outline: none;
+}
+
+/*------------------------
+	Header 
+-----------------------*/
+
+#page-header {
+	padding: 0;
+	margin: 0 auto;
+	background: url([[pix:theme|headbg]]) repeat-x 0 100% #fff;
+	color: #fff;
+	height: 152px;
+}
+
+#page-header-wrapper {
+	background: url([[pix:theme|logo]]) no-repeat 10px 25px;
+	position: relative;
+	height: 152px;
+	margin: 0 3%;
+}
+
+#page-header-wrapper p#homelink {
+	position: absolute;
+	left: 10px;
+	top: 25px;
+	padding: 0;
+	margin: 0;
+}
+
+#page-header-wrapper p#homelink a {
+	width: 472px;
+	height: 102px;
+	display: block;
+	text-decoration: none;
+	text-indent: -9999px;
+}
+
+#page-header-wrapper p#homelink a:hover {
+	text-decoration: none;
+}
+
+#page-header h1, #page-header h1.inside {
+	color: #000072;
+	margin: 0;
+	font-size: 1.8em;
+	position: absolute;
+	right: 31px;
+	top: 55px;
+	line-height: 1.2em;
+	width: 500px;
+	text-align: right;
+}
+
+.headermenu {
+	font-size: 0.9em;
+	float: right;
+	margin-top: 27px;
+	padding-right: 20px;
+	position: relative;
+}
+
+.headermenu a {
+	color: #8f8f8f;
+	font-weight: bold;
+}
+
+.logininfo {
+	color: #787878;
+}
+
+.logininfo a {
+	color: #604329;
+}
+
+/*------------------------
+	Custom menu
+-----------------------*/
+
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content,
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content .ul {border: none;}
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content {font-size:1em;line-height:1em;padding:0;}
+#custommenu .yui3-menu-horizontal.javascript-disabled li a {padding:0 25px;}
+#custommenu .yui3-menu-horizontal.javascript-disabled>.yui3-menu-content>ul>li {float:left;}
+
+#custommenu {
+	padding: 0;
+	margin: 0 auto;
+	background: url([[pix:theme|menubg]]) repeat-x;
+	color: #005581;
+	height: 38px;
+	width: 100%;
+	clear: both;
+	position: relative;
+	z-index: 9999;
+}
+	
+#custom-menu-wrapper {
+	height: 38px;
+	background: url([[pix:theme|menubg]]) repeat-x;
+	margin: 0 3%;
+	position: relative;
+}
+
+#custom-menu-wrapper * { 
+    border: none;
+}
+
+#custom-menu-wrapper ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	z-index:10;
+}
+
+#custom-menu-wrapper li {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+#custom-menu-wrapper ul li a {
+	float: none;
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 25px 0;
+	cursor: pointer;
+	text-decoration: none; 
+	text-align: left; 
+	color: #000072;
+	background: url([[pix:theme|menubg]]) repeat-x;
+	overflow: hidden;
+	font-size: 1em;
+	margin-top: 0px !important;
+    padding-top: 0px !important;
+	vertical-align: top;
+	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.6);
+}
+
+#custom-menu-wrapper ul li:hover > a, #custom-menu-wrapper .yui3-menu .yui3-menu-label-active, 
+#custom-menu-wrapper .yui3-menu .yui3-menu-label-menuvisible {
+	background: url([[pix:theme|menubg_o]]) repeat-x;
+	color: #fff;
+	text-shadow: none;
+}
+
+#custom-menu-wrapper ul li ul {
+	padding: 11px 10px 6px;
+	margin-top: 1px;
+	background: #192153;
+	border: none;
+	position: absolute;
+	z-index: 1;
+}
+
+#custom-menu-wrapper ul li ul li ul {
+	margin-top: -11px;
+}
+
+#custom-menu-wrapper ul li ul li a {
+	font-size: 0.85em;
+	line-height: 24px;
+	height: 24px;
+	padding: 0 24px 0 12px;
+	margin-bottom: 6px;
+	color: #fff;
+	background: #192153;
+	border: none;
+	text-shadow: none;
+}
+
+#custom-menu-wrapper ul li ul li:hover > a {
+	background: url([[pix:theme|arrow-next]]) no-repeat 100% 50% #252e63;
+	line-height: 24px;
+	height: 24px;
+	text-shadow: none;
+}
+
+#custom-menu-wrapper .yui3-menu .yui3-menu-content {
+	font-size: 1em;
+	background: transparent;
+}
+
+#custom-menu-wrapper .yui3-menu .yui3-menu-content li li:hover > a,
+#custom-menu-wrapper .yui3-menu .yui3-menuitem-content, 
+#custom-menu-wrapper .yui3-menu-content, 
+#custom-menu-wrapper .yui3-menu .yui3-menu .yui3-menu-content {
+	margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+#custom-menu-wrapper .yui3-menu .yui3-menu .yui3-menu-label-active, 
+#custom-menu-wrapper .yui3-menu .yui3-menu .yui3-menu-label-menuvisible {
+	background: url([[pix:theme|arrow-down]]) no-repeat 100% 50% #252e63;
+	text-shadow: none;
+}
+
+/*------------------------
+	Navbar
+-----------------------*/
+
+.navbar {
+	clear: both;
+	margin: 0 auto;
+	padding: 12px 0 0;
+	height: 24px;
+	background: transparent;
+	font-size: 0.9em;
+}
+
+.navbar .wrapper {
+	margin: 0 3%;
+	height: 36px;
+}
+
+.navbar .wrapper .navbutton {
+	line-height: 22px;
+	margin-right: 20px;
+}
+
+.navbar, .navbar a {
+	color: #fff;
+}
+
+.navbar .breadcrumb {
+	text-align: left;
+	padding: 0 20px 0 25px;
+	vertical-align: middle;
+}
+
+.navbar .breadcrumb ul {
+	line-height: 22px;
+}
+
+.navbar .breadcrumb li {
+	color: #fff;
+	padding-right: 5px;
+	font-size: 1em;
+	line-height: 22px;
+}
+
+.navbar .breadcrumb li a {
+	color: #fff;
+	font-style: normal;
+}
+
+.navbar .breadcrumb .sep {
+	background: url([[pix:theme|sep]]) no-repeat transparent;
+	background-position: 0 50%;
+	text-indent: -9999px;
+	display: inline-block;
+	width: 10px;
+	line-height: 22px;
+	padding-bottom: 2px;
+	padding-right: 6px;
+}
+
+
+/*------------------------
+	Blocks
+-----------------------*/
+
+.block {
+    margin-bottom: 12px;
+    border: none;
+    background: #fff;
+}
+
+.block .header {
+    padding: 0 4px 0 10px;
+    border: 1px solid #e4e4e4;
+	background: url([[pix:theme|blockbg]]) repeat-x #e1e1e1;
+	height: auto !important;
+	height: 30px;
+}
+
+.block .title h2, .block .header h2 {
+    color: #364761;
+    font-size: 1em;
+	line-height: 30px;
+}
+
+.block div.block_action input, .block div.block_action img {
+	margin-top: 0;
+	margin-right: 3px;
+	position: relative;
+	top: 6px;
+}
+
+.block .content {
+    background: #fff;
+    border: none;
+    padding: 10px 13px 13px;
+}
+
+.block_js_expansion .block_tree {
+    overflow: auto;
+}
+
+.block_recent_activity h2,main,
+.block_recent_activity h3.main {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+.block_calendar_month .content h3.eventskey {
+    font-size: 1em;
+    margin: 0.25em 0;
+}
+
+td.eventskey {
+    padding: 0 5px 3px;
+}
+
+.minicalendar td,
+.minicalendar th {
+    border-color: transparent;
+}
+
+.calendartable .today {
+  border: 1px solid #ccc;
+}
+
+.block .minicalendar td.weekend {
+    color: #990000;
+}
+
+.calendartable .weekend {
+	color:#990000;
+}
+
+.block_comments textarea {
+    width: 97%;
+    margin-bottom: 1em;
+}
+
+.block_comments .comment-area a {
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #e5e5e5;
+}
+
+.comment-delete-confirm {
+    background: #fff;
+}
+
+.block_messages .content {
+    font-size: 0.95em;
+}
+
+.block_messages .footer {
+    text-align: center;
+}
+
+/*------------------------
+	Forum
+------------------------*/
+
+.forumpost {
+	width: 100%;
+}
+
+.forumpost .topic {
+	background: #785b41;
+	padding: 13px;
+	color: #fff;
+}
+
+.forumpost .author a {
+	color: #fff;
+}
+
+.forumheaderlist .author a {
+	color: #000080;
+}
+
+.forumpost .topic .subject {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.forumpost .topic .subject a {
+	color: #fff;
+}
+	
+.forumpost .topic .author {
+	font-size: 0.9em;
+}
+
+.forumpost .content {
+	background: #fff;
+	border-width: 0 1px 1px;
+	border-style: solid;
+	border-color: #d9d8d4;
+	padding: 13px;
+}
+
+/*------------------------
+	Course
+---------------------------*/
+
+h2.headingblock {
+	border: none;
+	padding: 8px 0 7px;
+	font-size: 2em;
+	font-weight: normal;
+	color: #000072;
+	border-width: 0 0 3px 0;
+	border-style: solid;
+	border-color: #ccc;
+}
+
+.course-content .main {
+	background: #efefef;
+	border: 1px solid #ddd;
+	height: 100%;
+}
+
+.course-content .current {
+	background: #6f6f6f;
+	color: #fff;
+}
+
+.course-content .main .content {
+	background: #fff;
+}
+
+.coursebox, .course_category_tree, .categorybox {
+	border-width: 0;
+}
+
+
+/*------------------------
+	Footer
+---------------------------*/
+
+.helplink {
+	text-align: center;
+	clear: both;
+	padding-top: 30px;
+}
+
+#page-footer {
+	background: transparent;
+	position: relative;
+	padding-bottom: 20px;
+	margin: 5px auto;
+	min-height: 50px;
+}
+
+#page-footer a {
+	color: #fff;
+}
+
+.copyright {
+	color: #e7eaf0;
+	font-size: 0.85em;
+	text-align: center;
+	padding-top: 8px;
+	line-height: 1em;
+}
+
+#page-footer p#powered_by {
+	text-indent: -9999px;
+	position: absolute;
+	left: 18px;
+	top: 15px;
+	background: url([[pix:theme|pukunui]]) no-repeat;
+}
+
+#page-footer p#powered_by a {
+	display: block;
+	width: 136px;
+	height: 41px;
+	text-decoration: none;
+}
+
+#page-footer .logininfo {
+	font-size: 0.85em;
+	text-align: center;
+	margin: 0;
+	padding: 17px 0 0;
+	color: #e7eaf0;
+}
+
+#page-footer .logininfo a {
+	color: #fff;
+}
+
+#page-footer .validators {
+	margin-top: 20px;
+	line-height: 1.5em;
+	border-top: 1px dotted #ccc;
+	padding: 10px 0 0;
+	clear: both;
+}
+
+#page-footer .validators ul {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+#page-footer .validators ul li {
+	display:inline;
+	margin-right:10px;
+	margin-left:10px;
+	font-size: 0.8em;
+}
+
+#page-footer .validators ul li a {
+	color: #e7eaf0;
+}
+
+/*------------------------
+	Dock
+---------------------------*/
+
+#dock {
+	background: url([[pix:theme|dockbg]]) repeat-y #bc8e02;
+	border-right-color: #433b30;
+}
+
+#dock .dockeditem_container {
+	margin-top: 10px;
+}
+
+#dock .dockeditem {
+	background-color: #fff;
+}
+
+#dock .firstdockitem {
+	margin-top: 1em;
+}
+
+#dock .dockeditem .dockedtitle {
+	border-color: #dddddd;
+	border-top-color: #fff;
+}
+
+#dock .dockeditem .dockedtitle.activeitem {
+	background: #ccc;
+	border-top-color: #bc8e02;
+}
+
+#dock .firstdockitem .dockedtitle {
+	border-top-color: #ddd;	
+}
+	
+#dock .dockeditem .dockedtitle h2 {
+	margin: 12px 0 12px 7px;
+}
+
+#dockeditempanel .dockeditempanel_content {
+	border-color: #433b30;
+}
+
+#dockeditempanel .dockeditempanel_hd {
+	border-bottom: none;
+	padding: 3px 5px;
+	background: #ccc;
+	text-align: left;
+}
+
+#dockeditempanel .dockeditempanel_hd h2 {
+	color: #333;
+	text-align: left;
+	font-weight: normal;
+	font-size: 1.25em;
+	padding: 0 2px;
+}
+
+#dockeditempanel .dockeditempanel_hd .commands {
+	float: right;
+}
+
+/*------------------------
+	Others
+---------------------------*/
+
+.jumpmenu {
+	margin-top: 30px;
+}
+
+#page-admin-course-category .generalbox th,
+.editcourse .header,
+.results .header,
+#attempts .header,
+.generaltable .header,
+.plugincompattable th,
+.environmenttable th,
+.forumheaderlist th {
+	background: url([[pix:theme|menubg_o]]) repeat-x #192153;
+	color: #fff;
+}
+
+#page-admin-course-category .generalbox th a,
+.editcourse .header a,
+.results .header a,
+#attempts .header a,
+.generaltable .header a,
+.plugincompattable th a,
+.environmenttable th a,
+.forumheaderlist th a {
+	color: #fff;
+}
+
+.tabtree .tabrow0 li a {
+	padding-bottom: 6px;
+	line-height: 2em;
+}
+
+.que {
+	padding: 10px 15px 10px 10px;
+}
+
+.que .feedback {
+	border-width: 0px;
+}
+
+.que .answer {
+	margin-bottom: 2em;
+}
+
+.que p { 
+	clear: both;
+}
+
+/*------------------------
+	Custom CSS
+---------------------------*/
+
+[[setting:customcss]]
