@@ -245,9 +245,11 @@ if($feedback_complete_cap) {
         }
     }else {
         echo '<h2><font color="red">'.get_string('this_feedback_is_already_submitted', 'feedback').'</font></h2>';
-        if($courseid) {
+        if ($feedback->site_after_submit) {
+            echo $OUTPUT->continue_button(feedback_encode_target_url($feedback->site_after_submit));
+        } elseif ($courseid) {
             echo $OUTPUT->continue_button($CFG->wwwroot.'/course/view.php?id='.$courseid);
-        }else {
+        } else {
             echo $OUTPUT->continue_button($CFG->wwwroot.'/course/view.php?id='.$course->id);
         }
     }
